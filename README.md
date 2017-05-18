@@ -3,8 +3,8 @@ opt
 
 Refresh yourself on what those elusive options do, hassle free!
 
-Use Cases
-=========
+Example
+-------
 
 View the descriptions of -xcf and --format in the given order:
 
@@ -19,4 +19,3 @@ License
 =======
 
 This software is licensed under GPLv3. See the `LICENSE` file for more information.
-
