@@ -8,7 +8,13 @@ Example
 
 View the descriptions of -xcf and --format in the given order:
 
-    opt tar '-xcf --format'
+    python3 opt.py tar -xcf
+
+Notes
+-----
+
+For the sake of my sanity, I will refer to the optional arguments for this
+program as flags, and the positional argument as options.
 
 Contributing
 ============
