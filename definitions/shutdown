@@ -3,7 +3,7 @@ Requests that the system be rebooted after it has been brought down.
 
 -h
 Requests that the system be either halted or powered off after it has been
-brought  down with the choice as to which left up to the system.
+brought down with the choice as to which left up to the system.
 
 -H
 Requests that the system be halted after it has been brought down.
