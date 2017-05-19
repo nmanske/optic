@@ -1,7 +1,3 @@
-####################
-# FUNCTION LETTERS #
-####################
-
 -A, --catenate, --concatenate
 append tar files to an archive
 
@@ -28,10 +24,6 @@ only append files newer than copy in archive
 
 -x, --extract, --get
 extract files from an archive
-
-#################
-# OTHER OPTIONS #
-#################
 
 -a, --auto-compress
 use archive suffix to determine the compression program
@@ -328,13 +320,15 @@ member arguments are listed in the same order as the
 handle sparse files efficiently
 
 --same-owner
-try extracting files with the same ownership as exists in the archive (default for superuser)
+try extracting files with the same ownership as exists in the archive
+(default for superuser)
 
 --no-same-owner
 extract files as yourself (default for ordinary users)
 
 --no-same-permissions
-apply the user's umask when extracting permissions from the archive (default for ordinary users)
+apply the user's umask when extracting permissions from the archive
+(default for ordinary users)
 
 --no-seek
 archive is not seekable
@@ -349,7 +343,8 @@ Disable the SELinux context support
 show tar defaults
 
 --show-omitted-dirs
-when listing or extracting, list each directory that does not match search criteria
+when listing or extracting, list each directory that does not match
+search criteria
 
 --show-snapshot-field-ranges
 show valid ranges for snapshot-file fields
@@ -367,8 +362,8 @@ set version of the sparse format to use (implies --sparse)
 strip NUMBER leading components from file names on extraction
 
 --suffix=STRING
-backup before removal, override usual suffix ('~' unless overridden by environment variable SIM‐
-PLE_BACKUP_SUFFIX)
+backup before removal, override usual suffix ('~' unless overridden by
+environment variable SIMPLE_BACKUP_SUFFIX)
 
 -T, --files-from FILE
 get names to extract or create from FILE
@@ -398,8 +393,8 @@ print file modification times in UTC
 verbosely list files processed
 
 -V, --label TEXT
-create archive with volume name TEXT; at list/extract time, use TEXT as a globbing pattern for volume
-name
+create archive with volume name TEXT; at list/extract time, use TEXT
+as a globbing pattern for volume name
 
 --volno-file=FILE
 use/update the volume number in FILE
