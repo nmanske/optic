@@ -12,16 +12,17 @@ cmd_in = args.command
 opts_in = list(args.options.replace('-',''))
 
 opts_dict = {}
+syn_dict = {}
 defs_dict = {}
 
 # CONSTRUCT DICTIONARIES OF TARGET CMD
 with open('definitions/' + cmd_in, 'r') as f:
     entries = f.read().split('\n\n')
     for index, entry in enumerate(entries, start=1):
-        opts_anum = entry.replace(',','').replace('-','')
-        opts = opts_anum.split('\n')[0].split(' ')
+        opts = entry.replace(',','').replace('-','').split('\n')[0].split(' ')
         for opt in opts:
             opts_dict.update({opt:index})
+        syn_dict.update({index:entry.split('\n')[0]})
         defs = ' '.join(entry.split('\n')[1:])
         defs_dict.update({index:defs})
 
@@ -29,8 +30,8 @@ with open('definitions/' + cmd_in, 'r') as f:
 for opt in opts_in:
     if opt in opts_dict:
         dict_index = opts_dict.get(opt)
+        syn_entry = syn_dict.get(dict_index)
         dict_entry = defs_dict.get(dict_index)
-        print('-' + opt)
-        print(dict_entry+'\n')
+        print(syn_entry + '\n' + dict_entry + '\n')
     else:
-        print('-' + opt + '\nunknown option\n')
+        print('-' + opt + '\ninvalid option\n')
