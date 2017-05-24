@@ -1,5 +1,6 @@
 import sys
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('command', help='parse options of specified command')
@@ -10,6 +11,14 @@ args = parser.parse_args()
 
 cmd_in = args.command
 opts_in = list(args.options.replace('-',''))
+
+cmd_defs = os.listdir('definitions')
+if cmd_in not in cmd_defs:
+    print(cmd_in + ' does not have a definition')
+    sys.exit(0)
+
+#cmd_in = sys.argv[1]
+#opts_in = sys.argv[2]
 
 opts_dict = {}
 syn_dict = {}
@@ -32,6 +41,8 @@ for opt in opts_in:
         dict_index = opts_dict.get(opt)
         syn_entry = syn_dict.get(dict_index)
         dict_entry = defs_dict.get(dict_index)
+        if not dict_entry:
+            dict_entry = 'no description found'
         print(syn_entry + '\n' + dict_entry + '\n')
     else:
         print('-' + opt + '\ninvalid option\n')

@@ -14,7 +14,7 @@ Notes
 -----
 
 For the sake of my sanity, I will refer to the optional arguments for this
-program as flags, and the positional argument as options.
+program as flags, and the positional arguments as options.
 
 Contributing
 ============
