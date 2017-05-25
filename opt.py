@@ -26,22 +26,36 @@ if cmd_in not in cmd_defs:
     print(cmd_in + ' does not have a definition')
     sys.exit(0)
 
-# Construct master list of cmd definitions
-entries_list = []
+# Read cmd file contents
+entries = []
 with open('definitions/' + cmd_in, 'r') as f:
     entries = f.read().split('\n\n')
-    for index, entry in enumerate(entries, start=1):
-        opts = entry.replace(',','').split('\n')[0].split(' ')
-        altr = entry.split('\n')[0]
-        defn = ' '.join(entry.split('\n')[1:])
-        for opt in opts:
-            opt_no_dash = re.sub('^[^a-zA-Z]*|[^a-zA-Z]*$', '', opt)
-            entries_list.append((opt_no_dash, altr, defn))
+
+# Construct master list of cmd definitions
+entries_list = []
+for entry in entries:
+    opts = entry.replace(',','').split('\n')[0].split(' ')
+    altr = entry.split('\n')[0]
+    defn = ' '.join(entry.split('\n')[1:])
+    for opt in opts:
+        opt_no_dash = re.sub('^[^a-zA-Z]*|[^a-zA-Z]*$', '', opt)
+        entries_list.append((opt_no_dash, altr, defn))
+
+# Format user options for fetching
+for opt_in in opts_in:
+    valid_long_opt = any(entry[0] == opt_in and len(opt_in) > 1
+                          for entry in entries_list)
+    if valid_long_opt is False:
+        index = opts_in.index(opt_in)
+        opt_alph = ''.join([c for c in opt_in if c.isalpha()])
+        opt_sep = ' '.join(opt_alph)
+        opts_in[index] = opt_sep
+
+opts_str = ' '.join(opts_in)
+opts_in = opts_str.split()
 
 # Fetch options in user given order
-print(opts_in)
 for opt_in in opts_in:
-    #if any(entry[0] == opt_in and len(opt_in) > 1 for entry in entries_list):
     for entry in entries_list:
         opt = entry[0]
         if opt_in == opt:
