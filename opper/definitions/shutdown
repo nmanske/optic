@@ -1,0 +1,20 @@
+-r
+Requests that the system be rebooted after it has been brought down.
+
+-h
+Requests that the system be either halted or powered off after it has been
+brought down with the choice as to which left up to the system.
+
+-H
+Requests that the system be halted after it has been brought down.
+
+-P
+Requests that the system be powered off after it has been brought down.
+
+-c
+Cancels a running shutdown. TIME is not specified with this option, the
+first argument is MESSAGE.
+
+-k
+Only send out the warning messages and disable logins, do not actually bring
+the system down.
