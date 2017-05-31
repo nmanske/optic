@@ -12,6 +12,6 @@ setup(
     url         = 'https://github.com/nmanske/opper',
     author      = 'Nathan Manske',
     author_email= 'nathaniel.manske@gmail.com',
-    license     = 'GPL v2.0',
+    license     = 'GPLv3',
     scripts     = ['bin/opper']
 )
