@@ -1,4 +1,4 @@
-opper
+optic
 =====
 
 Refresh yourself on what those elusive options do, hassle free!
@@ -8,7 +8,21 @@ Example
 
 View the descriptions of -xcf and --format in the given order:
 
-    opper tar xcf format
+    optic tar xcf update
+
+Output:
+
+    -x, --extract, --get
+    -extract files from an archive
+
+    -c, --create
+    create a new archive
+
+    -f, --file ARCHIVE
+    use archive file or device ARCHIVE
+
+    -u, --update
+    only append files newer than copy in archive
 
 Notes
 -----
@@ -19,10 +33,10 @@ program as flags, and the positional arguments as options.
 Installing
 ==========
 
-opper is installed using pip for Python 3. By default your local pip tool may be 
+optic is installed using pip for Python 3. By default your local pip tool may be 
 linked to Python 2. To be safe run the following command:
 
-    sudo pip3 install opper
+    sudo pip3 install optic
 
 If the pip3 command is not found install the package with:
 
@@ -39,4 +53,3 @@ License
 =======
 
 This software is licensed under GPLv3. See the `LICENSE` file for more information.
-

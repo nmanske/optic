@@ -21,7 +21,8 @@ args = parser.parse_args()
 cmd_in = args.command
 opts_in = args.options
 
-defs_dir = 'opper/definitions'
+bin_dir = os.path.dirname(__file__)
+defs_dir = os.path.join(bin_dir, '../optic/definitions')
 
 # Check that parsed command has definition
 cmd_defs = os.listdir(defs_dir)
