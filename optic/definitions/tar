@@ -131,25 +131,25 @@ force NAME as group for added files
 follow symlinks; archive and dump the files they point to
 
 -H, --format FORMAT
-create archive of the given formatFORMAT is one of the following:
-
---format=gnu
-GNU tar 1.13.x format
-
---format=oldgnu
-GNU format as per tar <= 1.12
-
---format=pax
-POSIX 1003.1-2001 (pax) format
-
---format=posix
-same as pax
-
---format=ustar
-POSIX 1003.1-1988 (ustar) format
-
---format=v7
-old V7 tar format
+create archive of the given format where FORMAT is one of the following:
+|
+|    --format=gnu
+|    GNU tar 1.13.x format
+|
+|    --format=oldgnu
+|    GNU format as per tar <= 1.12
+|
+|    --format=pax
+|    POSIX 1003.1-2001 (pax) format
+|
+|    --format=posix
+|    same as pax
+|
+|    --format=ustar
+|    POSIX 1003.1-1988 (ustar) format
+|
+|    --format=v7
+|    old V7 tar format
 
 --hard-dereference
 follow hard links; archive and dump the files they refer to
