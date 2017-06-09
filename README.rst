@@ -7,7 +7,7 @@ Refresh yourself on what those elusive options do, hassle free!
 Example
 #######
 
-View the descriptions of -xcf and --format in the given order:
+View the descriptions of -xcf and --update in the given order:
 ::
 
     optic tar xcf update
@@ -26,12 +26,6 @@ Output:
 
     -u, --update
     only append files newer than copy in archive
-
-Notes
-#####
-
-For the sake of my sanity, I will refer to the optional arguments for this
-program as flags, and the positional arguments as options.
 
 **********
 Installing
@@ -54,7 +48,7 @@ Note that the above command will only work on Debian-based systems.
 Contributing
 ************
 
-This project is still in the beginning stages. Contributions are very welcome.
+Contributions are very welcome! Right now the project needs more definitions pages. And I mean a lot more. Follow the format of the existing definitions pages for your favorite command(s), submit a pull request, and your hard work will be added to the project. Cheers!
 
 *******
 License
