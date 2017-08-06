@@ -40,7 +40,6 @@ for entry in entries:
     opts_r = entry.replace(',','').replace('=',' ').split('\n')[0].split(' ')
     opts = [x for x in opts_r if x.startswith('-')]
     altr = entry.split('\n')[0]
-    print(opts)
     for opt in opts:
         defn = ' '.join(entry.split('\n')[1:])
         if '|    ' in defn:

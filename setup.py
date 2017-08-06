@@ -7,7 +7,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name        = 'optic',
-    version     = '0.0.3',
+    version     = '0.0.5',
     description = 'Easily display command-line options',
     url         = 'https://github.com/nmanske/optic',
     author      = 'Nathan Manske',
